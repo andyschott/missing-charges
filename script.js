@@ -15,14 +15,10 @@ class OrderElement extends HTMLElement {
         const shadow = this.shadowRoot;
         const orderNumberElem = shadow.getElementById('orderNumber');
         const orderNumber = orderNumberElem.value;
-        try {
-            await navigator.share({
-                title: 'Order Number',
-                text: orderNumber
-            });
-        } catch (err) {
-            alert(`Error sharing: '${err}'`);
-        }
+        await navigator.share({
+            title: 'Order Number',
+            text: orderNumber
+        });
     }
 }
 customElements.define('order-info', OrderElement);
