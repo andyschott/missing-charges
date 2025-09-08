@@ -8,32 +8,18 @@
 <body>
     <h1>Missing Charges</h1>
 
-    <table>
-        <thead>
-            <th>Date</th>
-            <th>Payee</th>
-            <th>Amount</th>
-            <th>Order Number</th>
-        </thead>
-        <tbody>
-            <td>
-                <input type="date">
-            </td>
-            <td>
-                <input type="text">
-            </td>
-            <td>
-                <input type="text">
-            </td>
-            <td>
-                <input type="text" id="orderNumber">
-            </td>
-            <td>
-                <button id="share">Share</button>
-            </td>
-        </tbody>
-    </table>
+    <order-info></order-info>
     <button>Add</button>
+
+    <template id="order-template">
+        <div>
+            <input type="date">
+            <input type="text">
+            <input type="text">
+            <input type="text" id="orderNumber">
+            <button id="share">Share</button>
+        </div>
+    </template>
 
 	<script src="script.js"></script>
 </body>
