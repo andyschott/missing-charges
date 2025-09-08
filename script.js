@@ -26,3 +26,12 @@ class OrderElement extends HTMLElement {
     }
 }
 customElements.define('order-info', OrderElement);
+
+onload = () => {
+    const addButton = document.querySelector('#addButton');
+    addButton.addEventListener('click', () => {
+        const orders = document.querySelector('#orders');
+        const order = document.createElement('order-info');
+        orders.appendChild(order);
+    })
+}
