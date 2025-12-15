@@ -27,15 +27,35 @@
                 padding: 0.5rem;
                 margin-bottom: 1rem;
             }
-
+            
             .order-details {
                 display: flex;
                 gap: 0.5rem;
             }
             
-            input#date {
-            	width: 6rem;
-            }
+			@media only screen and (max-width: 500px) {
+				input {
+					font-size: 1.25rem;
+				}
+								
+				input#date {
+					width: object-fit;
+				}
+	
+				.order-details {
+					flex-direction: column;
+				}
+			}
+			
+			@media only screen and (min-width: 500px) {
+				.order {
+					width: fit-content;
+				}
+				
+				input#date {
+					width: 25%;
+				}	
+			}
         </style>
 
         <div class="order">
@@ -43,6 +63,7 @@
             <div class="order-details">
                 <input type="text" placeholder="Description">
                 <input type="text" id="orderNumber" placeholder="Order Number">
+                <input type="text" id="category" placeholder="Category">
                 <button id="share">
                     <span class="material-symbols-outlined">ios_share</span>
                 </button>
