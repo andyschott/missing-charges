@@ -22,16 +22,24 @@
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
+                
+                border: 0.10rem solid;
+                padding: 0.5rem;
+                margin-bottom: 1rem;
             }
 
             .order-details {
                 display: flex;
                 gap: 0.5rem;
             }
+            
+            input#date {
+            	width: 6rem;
+            }
         </style>
 
         <div class="order">
-            <input type="date">
+            <input type="date" id="date">
             <div class="order-details">
                 <input type="text" placeholder="Description">
                 <input type="text" id="orderNumber" placeholder="Order Number">
