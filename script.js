@@ -29,5 +29,8 @@ onload = () => {
         const orders = document.querySelector('#orders');
         const order = document.createElement('order-info');
         orders.appendChild(order);
+        
+        const itemCount = document.querySelector('#itemCount');
+        itemCount.innerHTML = orders.childElementCount;
     })
 }
