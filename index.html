@@ -22,10 +22,19 @@
 
         <style>
             .order {
+            	display: flex;
+            	flex-direction: row;
+            	gap: 0.5rem;
+            	
+            	align-items: center;
+            }
+            
+            .order-info {
+            	flex-grow: 1;
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
-                
+
                 border: 0.10rem solid;
                 padding: 0.5rem;
                 margin-bottom: 1rem;
@@ -62,14 +71,17 @@
         </style>
 
         <div class="order">
-            <input type="date" id="date">
-            <div class="order-details">
-                <input type="text" placeholder="Description">
-                <input type="text" id="orderNumber" placeholder="Order Number">
-                <input type="text" id="category" placeholder="Category">
-                <button id="share">
-                    <span class="material-symbols-outlined">ios_share</span>
-                </button>
+        	<input type="checkbox" id="complete">
+        	<div class="order-info">
+				<input type="date" id="date">
+				<div class="order-details" id="orderDetails">
+					<input type="text" id="description" placeholder="Description">
+					<input type="text" id="orderNumber" placeholder="Order Number">
+					<input type="text" id="category" placeholder="Category">
+					<button id="share">
+						<span class="material-symbols-outlined">ios_share</span>
+					</button>
+				</div>
             </div>
         </div>
     </template>

@@ -9,6 +9,23 @@ class OrderElement extends HTMLElement {
         shareButton.addEventListener('click', async () => {
             await this.share();
         });
+        
+        const completeCheckbox = shadow.getElementById('complete');
+        completeCheckbox.addEventListener('change', (event) => {
+        	const dateInput = shadow.getElementById('date');
+        	dateInput.disabled = completeCheckbox.checked;
+        	
+        	const descriptionInput = shadow.getElementById('description');
+        	descriptionInput.disabled = completeCheckbox.checked;
+        	
+        	const orderNumberInput = shadow.getElementById('orderNumber');
+        	orderNumberInput.disabled = completeCheckbox.checked;
+        	
+        	const categoryInput = shadow.getElementById('category');
+        	categoryInput.disabled = completeCheckbox.checked;
+        	
+        	shareButton.disabled = completeCheckbox.checked;
+        });
     }
 
     async share() {
